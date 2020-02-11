@@ -10,3 +10,12 @@ body,
   margin: 2rem auto;
   padding: 0;
 }
+
+.poi {
+  border: .0625rem solid dodgerblue;
+  padding: .3rem;
+  border-radius: .3rem;
+  font-family: sans-serif;
+  color: dodgerblue;
+  text-decoration: none;
+}

@@ -1,16 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { VideoTexture } from "three";
 import { Viewer } from "./viewer";
 
 export function Video() {
-  // Get video an html element
+  // Get video as an html element & create texture
   const video = document.getElementById("video") as HTMLVideoElement;
   video.play();
-  // Create a video texture
-  const texture = new VideoTexture(video);
+  const texture = useMemo(() => new VideoTexture(video), [video]);
 
   // Handle play pause state
   const [paused, setPaused] = useState(false);
+
+  // Arbitrary create a list of "poi"
+  const pointsOfInterest = [
+    {
+      position: { x: 100, y: 10, z: 100 },
+      name: "Refuge du gouter",
+      link: "https://refugedugouter.ffcam.fr/FR_home.html"
+    },
+    {
+      position: { x: -100, y: 10, z: 100 },
+      name: "Chamonix",
+      link: "https://www.chamonix.com/"
+    },
+    {
+      position: { x: -250, y: 20, z: 100 },
+      name: "Passy",
+      link: "https://www.chamonix.com/"
+    }
+  ];
 
   useEffect(() => {
     if (paused) {
@@ -20,5 +38,12 @@ export function Video() {
     }
   }, [paused, video]);
 
-  return <Viewer texture={texture} paused={paused} setPaused={setPaused} />;
+  return (
+    <Viewer
+      pointsOfInterest={pointsOfInterest}
+      texture={texture}
+      paused={paused}
+      setPaused={setPaused}
+    />
+  );
 }
