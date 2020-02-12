@@ -5,10 +5,13 @@ import "./styles.css";
 import { Video } from "./video/video";
 
 ReactDOM.render(
-  <Canvas>
-    <ambientLight />
-    <pointLight position={[10, 10, 10]} />
-    <Video />
-  </Canvas>,
+  <div>
+    <h1>Enlaps 220° viewer</h1>
+    <Canvas camera={{ position: [0, 0, -1], far: 400 }}>
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <Video />s
+    </Canvas>
+  </div>,
   document.getElementById("root")
 );

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { VideoTexture } from "three";
 import { Viewer } from "./viewer";
 
-export function Video() {
+export function Video(): JSX.Element {
   // Get video as an html element & create texture
   const video = document.getElementById("video") as HTMLVideoElement;
   video.play();
@@ -14,17 +14,17 @@ export function Video() {
   // Arbitrary create a list of "poi"
   const pointsOfInterest = [
     {
-      position: { x: 100, y: 10, z: 100 },
+      position: { x: 200, y: -20, z: 200 },
       name: "Refuge du gouter",
       link: "https://refugedugouter.ffcam.fr/FR_home.html"
     },
     {
-      position: { x: -100, y: 10, z: 100 },
+      position: { x: 0, y: 40, z: 200 },
       name: "Chamonix",
       link: "https://www.chamonix.com/"
     },
     {
-      position: { x: -250, y: 20, z: 100 },
+      position: { x: -100, y: -20, z: 200 },
       name: "Passy",
       link: "https://www.chamonix.com/"
     }
