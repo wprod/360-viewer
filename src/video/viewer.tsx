@@ -1,109 +1,62 @@
-import React, {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState
-} from "react";
-import { DoubleSide, VideoTexture, Mesh, Vector3, PlaneGeometry } from "three";
-import {
-  Dom,
-  PointerEvent,
-  ReactThreeFiber,
-  useFrame,
-  useThree
-} from "react-three-fiber";
-import { PointOfInterest } from "./models";
+import React, { useState, useEffect, useMemo, useRef } from "react";
+import { VideoTexture } from "three";
+import { Video } from "./video";
+import { Canvas } from "react-three-fiber";
 
-interface ViewerProps {
-  texture: VideoTexture;
-  paused: boolean;
-  setPaused: Dispatch<SetStateAction<boolean>>;
-  pointsOfInterest: PointOfInterest[];
-}
-
-export function Viewer(props: ViewerProps) {
-  const mesh = useRef<ReactThreeFiber.Object3DNode<Mesh, typeof Mesh>>();
-  const planeGeometry = useRef<
-    ReactThreeFiber.Object3DNode<PlaneGeometry, typeof PlaneGeometry>
-  >();
-  const vertices = 10;
-  const { texture, paused, setPaused, pointsOfInterest } = props;
-
-  const [position, setPosition] = useState<{ x: number; y: number; z: number }>(
-    { x: 0, y: 0, z: 0 }
-  );
-
-  const { camera } = useThree();
-
-  function handlePointerMove(e: PointerEvent) {
-    const xFactor = 0.34;
-    const yFactor = 0.34;
-
-    const x =
-      e.point.x / 500 > xFactor
-        ? xFactor
-        : e.point.x / 500 < -xFactor
-        ? -xFactor
-        : e.point.x / 500;
-    const y =
-      e.point.y / 500 > yFactor
-        ? yFactor
-        : e.point.y / 500 < -yFactor
-        ? -yFactor
-        : e.point.y / 500;
-    setPosition({ x, y, z: e.point.z / 100 });
+// Arbitrary create a list of "poi"
+const pointsOfInterest = [
+  {
+    position: { x: 200, y: -20, z: 200 },
+    name: "Refuge du gouter",
+    link: "https://refugedugouter.ffcam.fr/FR_home.html"
+  },
+  {
+    position: { x: 0, y: 40, z: 200 },
+    name: "Chamonix",
+    link: "https://www.chamonix.com/"
+  },
+  {
+    position: { x: -100, y: -20, z: 200 },
+    name: "Passy",
+    link: "https://www.chamonix.com/"
   }
+];
 
-  useFrame(() => {
-    camera.lookAt(new Vector3(position.x, position.y, position.z));
-  });
+export function Viewer(): JSX.Element {
+  // Get video as an html element & create texture
+  const video = document.getElementById("video") as HTMLVideoElement;
+  video.play();
+  const texture = useMemo(() => new VideoTexture(video), [video]);
+
+  // Handle play pause state
+  const [paused, setPaused] = useState(false);
+
+  const canvasRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (planeGeometry.current && planeGeometry.current.vertices) {
-      // Loop over rows of vertices
-      for (let i = 0; i < vertices; i++) {
-        // Loop over row's vertices
-        for (let j = 0; j < vertices; j++) {
-          planeGeometry.current.vertices[i * vertices + j].z =
-            Math.cos((i - vertices / 2) / (vertices / 2)) * 300 +
-            Math.cos((j - vertices / 2) / (vertices / 2)) * 1000;
-        }
-      }
+    if (paused) {
+      video.pause();
+    } else {
+      video.play();
     }
-  }, []);
-
-  function renderPOI() {
-    return pointsOfInterest.map((poi: PointOfInterest, index: number) => (
-      <Dom
-        position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
-        key={`${index}-poi`}
-      >
-        <a className="poi" href={poi.link}>
-          {poi.name}
-        </a>
-      </Dom>
-    ));
-  }
+  }, [paused, video]);
 
   return (
-    <>
-      <mesh
-        {...props}
-        ref={mesh}
-        scale={[-1, 1, 1]}
-        position={[0, 0, -1000]}
-        onPointerMove={handlePointerMove}
-        onClick={() => setPaused(!paused)}
+    <div ref={canvasRef}>
+      <button onClick={() => setPaused(!paused)}>Pause</button>
+      <Canvas
+        shadowMap
+        pixelRatio={window.devicePixelRatio}
+        camera={{ far: 10000 }}
       >
-        <planeGeometry
-          ref={planeGeometry}
-          attach="geometry"
-          args={[1920, 1080, vertices - 1, vertices - 1]}
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Video
+          pointsOfInterest={pointsOfInterest}
+          texture={texture}
         />
-        <meshBasicMaterial attach="material" side={DoubleSide} map={texture} />
-      </mesh>
-      {renderPOI()}
-    </>
+        <axesHelper></axesHelper>
+      </Canvas>
+    </div>
   );
 }

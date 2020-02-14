@@ -1,49 +1,95 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { VideoTexture } from "three";
-import { Viewer } from "./viewer";
+import React, {
+  Dispatch,
+  MutableRefObject,
+  SetStateAction,
+  useEffect,
+  useRef
+} from "react";
+import { DoubleSide, VideoTexture, Mesh, Vector3, PlaneGeometry } from "three";
+import {
+  Dom,
+  extend,
+  ReactThreeFiber
+} from "react-three-fiber";
+import { PointOfInterest } from "./models";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { Controls } from "./controls";
+extend({ OrbitControls });
 
-export function Video(): JSX.Element {
-  // Get video as an html element & create texture
-  const video = document.getElementById("video") as HTMLVideoElement;
-  video.play();
-  const texture = useMemo(() => new VideoTexture(video), [video]);
-
-  // Handle play pause state
-  const [paused, setPaused] = useState(false);
-
-  // Arbitrary create a list of "poi"
-  const pointsOfInterest = [
-    {
-      position: { x: 200, y: -20, z: 200 },
-      name: "Refuge du gouter",
-      link: "https://refugedugouter.ffcam.fr/FR_home.html"
-    },
-    {
-      position: { x: 0, y: 40, z: 200 },
-      name: "Chamonix",
-      link: "https://www.chamonix.com/"
-    },
-    {
-      position: { x: -100, y: -20, z: 200 },
-      name: "Passy",
-      link: "https://www.chamonix.com/"
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      orbitControls: ReactThreeFiber.Object3DNode<
+        OrbitControls,
+        typeof OrbitControls
+      >;
     }
-  ];
+  }
+}
+
+interface ViewerProps {
+  texture: VideoTexture;
+  pointsOfInterest: PointOfInterest[];
+}
+
+export function Video(props: ViewerProps) {
+  const { texture, pointsOfInterest } = props;
+  const verticesPerRow = 101;
+
+  // Refs
+  const mesh = useRef<ReactThreeFiber.Object3DNode<Mesh, typeof Mesh>>();
+  const planeGeometry = useRef<
+    ReactThreeFiber.Object3DNode<PlaneGeometry, typeof PlaneGeometry>
+  >();
 
   useEffect(() => {
-    if (paused) {
-      video.pause();
-    } else {
-      video.play();
+    if (planeGeometry.current && planeGeometry.current.vertices) {
+      // Loop over rows of vertices
+      for (let row = 0; row < verticesPerRow; row++) {
+        // Loop over row's vertices
+        for (let vertexIndex = 0; vertexIndex < verticesPerRow; vertexIndex++) {
+          // Displace
+          planeGeometry.current.vertices[row * verticesPerRow + vertexIndex].z =
+            -Math.cos((row - verticesPerRow / 2) / (verticesPerRow / 2)) * 240 +
+            -Math.cos(
+              (vertexIndex - verticesPerRow / 2) / (verticesPerRow / 2)
+            ) *
+              1000;
+        }
+      }
     }
-  }, [paused, video]);
+  }, []);
+
+  function renderPOI() {
+    return pointsOfInterest.map((poi: PointOfInterest, index: number) => (
+      <Dom
+        position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
+        key={`${index}-poi`}
+      >
+        <a className="poi" href={poi.link}>
+          {poi.name}
+        </a>
+      </Dom>
+    ));
+  }
 
   return (
-    <Viewer
-      pointsOfInterest={pointsOfInterest}
-      texture={texture}
-      paused={paused}
-      setPaused={setPaused}
-    />
+    <>
+      <mesh
+        {...props}
+        ref={mesh}
+        scale={[1, 1, 1]}
+        position={[0, 0, 850]}
+      >
+        <planeGeometry
+          ref={planeGeometry}
+          attach="geometry"
+          args={[1920, 1080, verticesPerRow - 1, verticesPerRow - 1]}
+        />
+        <meshBasicMaterial attach="material" side={DoubleSide} map={texture} />
+      </mesh>
+      <Controls />
+      {renderPOI()}
+    </>
   );
 }
