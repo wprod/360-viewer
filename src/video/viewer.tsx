@@ -6,12 +6,12 @@ import { Canvas } from "react-three-fiber";
 // Arbitrary create a list of "poi"
 const pointsOfInterest = [
   {
-    position: { x: 200, y: -20, z: 200 },
+    position: { x: 110, y: 10, z: 200 },
     name: "Refuge du gouter",
     link: "https://refugedugouter.ffcam.fr/FR_home.html"
   },
   {
-    position: { x: 0, y: 40, z: 200 },
+    position: { x: -300, y: 50, z: 200 },
     name: "Chamonix",
     link: "https://www.chamonix.com/"
   },
@@ -47,15 +47,12 @@ export function Viewer(): JSX.Element {
       <Canvas
         shadowMap
         pixelRatio={window.devicePixelRatio}
-        camera={{ far: 10000 }}
+        camera={{ far: 1000 }}
       >
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        <Video
-          pointsOfInterest={pointsOfInterest}
-          texture={texture}
-        />
-        <axesHelper></axesHelper>
+        <Video pointsOfInterest={pointsOfInterest} texture={texture} />
+        {/*<axesHelper></axesHelper>*/}
       </Canvas>
     </div>
   );

@@ -6,11 +6,7 @@ import React, {
   useRef
 } from "react";
 import { DoubleSide, VideoTexture, Mesh, Vector3, PlaneGeometry } from "three";
-import {
-  Dom,
-  extend,
-  ReactThreeFiber
-} from "react-three-fiber";
+import { Dom, extend, ReactThreeFiber } from "react-three-fiber";
 import { PointOfInterest } from "./models";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Controls } from "./controls";
@@ -63,11 +59,21 @@ export function Video(props: ViewerProps) {
   function renderPOI() {
     return pointsOfInterest.map((poi: PointOfInterest, index: number) => (
       <Dom
+        center={true}
         position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
         key={`${index}-poi`}
       >
-        <a className="poi" href={poi.link}>
-          {poi.name}
+        <a href={poi.link} className="button nav-link">
+          <div className="bottom"></div>
+
+          <div className="top">
+            <div className="label">{poi.name}</div>
+
+            <div className="button-border button-border-left" />
+            <div className="button-border button-border-top" />
+            <div className="button-border button-border-right" />
+            <div className="button-border button-border-bottom" />
+          </div>
         </a>
       </Dom>
     ));
@@ -75,12 +81,7 @@ export function Video(props: ViewerProps) {
 
   return (
     <>
-      <mesh
-        {...props}
-        ref={mesh}
-        scale={[1, 1, 1]}
-        position={[0, 0, 850]}
-      >
+      <mesh {...props} ref={mesh} scale={[1, 1, 1]} position={[0, 0, 850]}>
         <planeGeometry
           ref={planeGeometry}
           attach="geometry"

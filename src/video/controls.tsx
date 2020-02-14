@@ -38,7 +38,8 @@ export function Controls() {
       enableDamping={true}
       enableKeys={false}
       enableZoom={false}
-      panSpeed={.5}
+      rotateSpeed={0.1}
+      panSpeed={0.5}
       args={[camera, domElement]}
     />
   );
