@@ -59,7 +59,6 @@ export function Video(props: ViewerProps) {
   function renderPOI() {
     return pointsOfInterest.map((poi: PointOfInterest, index: number) => (
       <Dom
-        center={true}
         position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
         key={`${index}-poi`}
       >

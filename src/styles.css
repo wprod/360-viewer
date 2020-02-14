@@ -4,6 +4,7 @@
 
 html,
 body {
+  color: #181a1c;
   padding: 0;
   margin: 0;
   background: lightgrey;
@@ -18,108 +19,34 @@ canvas {
 }
 
 .button {
-  display: inline-block;
   text-decoration: none;
-  position: relative;
-}
-
-.button .bottom {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(42, 205, 193, 0.42);
-  display: block;
-  border-radius: 3px;
-  -webkit-transition: all .15s ease-out;
-  -moz-transition: all .15s ease-out;
-  -o-transition: all .15s ease-out;
-  transition: all .15s ease-out;
-}
-
-.button .top {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  padding: 11px 17px 7px 17px;
-  border: 2px solid #04049d;
-}
-
-.button-dark .top {
-  border: 2px solid #fff;
-}
-
-.button .top .label {
+  color: #181a1c;
   font-family: sans-serif;
-  font-weight: 600;
-  color: #04049d;
-  font-size: 12px;
-  line-height: 110%;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: all .15s ease-out;
-  -moz-transition: all .15s ease-out;
-  -o-transition: all .15s ease-out;
-  transition: all .15s ease-out;
+  position: relative;
+  display: inline-block;
 }
 
-.button-dark .top .label {
-  color: #fff;
-}
-
-.button:hover .bottom {
-  left: 0;
-  top: 0;
-  background-color: rgba(243, 243, 243, 0.18);
-}
-
-
-.button-border {
+.button:before {
+  content: '';
   position: absolute;
-  background-color: rgba(42, 205, 193, 0.49);
-  -webkit-transition: all .25s ease-out;
-  -moz-transition: all .25s ease-out;
-  -o-transition: all .25s ease-out;
-  transition: all .25s ease-out;
-}
-
-.button:hover .top .button-border-left,.button:hover .top .button-border-right {
-  height: calc(100% + 2px);
-}
-
-.button:hover .top .button-border-top,.button:hover .top .button-border-bottom {
-  width: calc(100% + 2px);
-}
-
-.button-border-left {
-  left: -2px;
-  bottom: -2px;
-  width: 2px;
-  height: 0;
-}
-
-.button-border-top {
-  left: -2px;
-  top: -2px;
-  width: 0;
+  width: 100%;
   height: 2px;
-}
-
-.button-border-right {
-  right: -2px;
-  top: -2px;
-  width: 2px;
-  height: 0;
-}
-
-.button-border-bottom {
-  right: -2px;
   bottom: -2px;
-  width: 0;
-  height: 2px;
+  left: 0;
+  background: #181a1c;
+  border-radius: .1rem;
 }
+
+.button:after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: -2px;
+  left: -29%;
+  transform: rotateZ(-45deg);
+  transform-origin: 100% 100%;
+  background: #181a1c;
+  border-radius: .1rem;
+}
+
