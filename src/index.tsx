@@ -1,14 +1,12 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import { Canvas } from "react-three-fiber";
 import "./styles.css";
-import { Video } from "./video/video";
+import { Viewer } from "./video/viewer";
 
 ReactDOM.render(
-  <Canvas>
-    <ambientLight />
-    <pointLight position={[10, 10, 10]} />
-    <Video />
-  </Canvas>,
+  <div>
+    <h1>Enlaps 220° viewer</h1>
+    <Viewer />
+  </div>,
   document.getElementById("root")
 );
