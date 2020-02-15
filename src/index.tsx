@@ -35,17 +35,17 @@ const views: View<ViewContentTypeEnum>[] = [
     description: "Levé de soleil",
     pointOfInterest: [
       {
-        position: { x: 110, y: 10, z: 200 },
+        position: { x: 0, y: 0, z: 500 },
         name: "Refuge du Soleil",
         link: "https://refugedugouter.ffcam.fr/FR_home.html"
       },
       {
-        position: { x: -300, y: 50, z: 200 },
+        position: { x: -350, y: -160, z: 500 },
         name: "Grenoble",
         link: "https://www.chamonix.com/"
       },
       {
-        position: { x: -100, y: -20, z: 200 },
+        position: { x: -180, y: -190, z: 500 },
         name: "Crolles",
         link: "https://www.chamonix.com/"
       }

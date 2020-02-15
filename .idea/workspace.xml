@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="Small style adjustments">
-      <change afterPath="$PROJECT_DIR$/src/video/utils.ts" afterDir="false" />
+    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/video-1.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/useResize.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/controls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/controls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/tests/app.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/tests/app.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/video.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/viewer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +129,7 @@
       <workItem from="1581345641855" duration="4021000" />
       <workItem from="1581405148927" duration="4988000" />
       <workItem from="1581664315594" duration="17090000" />
-      <workItem from="1581689347364" duration="22937000" />
+      <workItem from="1581689347364" duration="24027000" />
     </task>
     <task id="LOCAL-00001" summary="New way to build the scene geometry">
       <created>1581524304142</created>
@@ -169,7 +159,49 @@
       <option name="project" value="LOCAL" />
       <updated>1581696249191</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add more test videos">
+      <created>1581772423170</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772423170</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Test buildPlaneGeometry">
+      <created>1581772464507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772464507</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Invert pan direction">
+      <created>1581772490730</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772490730</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add dynamic models">
+      <created>1581772535291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772535291</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Performances with useMemo">
+      <created>1581772588695</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772588695</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix approximative overflow">
+      <created>1581772625588</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772625588</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +211,13 @@
     <MESSAGE value="New way to build the scene geometry" />
     <MESSAGE value="Add OrbitControls" />
     <MESSAGE value="Small style adjustments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small style adjustments" />
+    <MESSAGE value="Add more test videos" />
+    <MESSAGE value="Test buildPlaneGeometry" />
+    <MESSAGE value="Invert pan direction" />
+    <MESSAGE value="Add dynamic models" />
+    <MESSAGE value="Performances with useMemo" />
+    <MESSAGE value="Fix approximative overflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix approximative overflow" />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581664964582">
@@ -190,11 +228,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="660" y="251" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581345484153" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581772588305">
+    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581772625248">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581684329313" />
-    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581772588305" />
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581772625248" />
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1581610225368">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
