@@ -24,6 +24,8 @@ canvas {
   font-family: sans-serif;
   position: relative;
   display: inline-block;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .button:before {
@@ -43,9 +45,9 @@ canvas {
   width: 30%;
   height: 2px;
   bottom: -2px;
-  left: -29%;
+  left: -30%;
   transform: rotateZ(-45deg);
-  transform-origin: 100% 100%;
+  transform-origin: 100% calc(100% - 1px);
   background: #181a1c;
   border-radius: .1rem;
 }
