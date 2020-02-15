@@ -1,19 +1,17 @@
-import React, {
-  Dispatch,
-  MutableRefObject,
-  SetStateAction,
-  useEffect,
-  useRef
-} from "react";
-import { DoubleSide, VideoTexture, Mesh, Vector3, PlaneGeometry } from "three";
+import React, { useEffect, useRef } from "react";
 import {
-  Dom,
-  extend,
-  ReactThreeFiber
-} from "react-three-fiber";
+  DoubleSide,
+  VideoTexture,
+  Mesh,
+  Vector3,
+  PlaneGeometry,
+  Texture
+} from "three";
+import { Dom, extend, ReactThreeFiber } from "react-three-fiber";
 import { PointOfInterest } from "./models";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { Controls } from "./controls";
+import { buildPlaneGeometry } from "./utils";
 extend({ OrbitControls });
 
 declare global {
@@ -28,13 +26,13 @@ declare global {
 }
 
 interface ViewerProps {
-  texture: VideoTexture;
-  pointsOfInterest: PointOfInterest[];
+  texture: VideoTexture | Texture;
+  pointsOfInterest?: PointOfInterest[];
 }
 
 export function Video(props: ViewerProps) {
   const { texture, pointsOfInterest } = props;
-  const verticesPerRow = 101;
+  const verticesPerRow = 51;
 
   // Refs
   const mesh = useRef<ReactThreeFiber.Object3DNode<Mesh, typeof Mesh>>();
@@ -44,43 +42,32 @@ export function Video(props: ViewerProps) {
 
   useEffect(() => {
     if (planeGeometry.current && planeGeometry.current.vertices) {
-      // Loop over rows of vertices
-      for (let row = 0; row < verticesPerRow; row++) {
-        // Loop over row's vertices
-        for (let vertexIndex = 0; vertexIndex < verticesPerRow; vertexIndex++) {
-          // Displace
-          planeGeometry.current.vertices[row * verticesPerRow + vertexIndex].z =
-            -Math.cos((row - verticesPerRow / 2) / (verticesPerRow / 2)) * 240 +
-            -Math.cos(
-              (vertexIndex - verticesPerRow / 2) / (verticesPerRow / 2)
-            ) *
-              1000;
-        }
-      }
+      planeGeometry.current.vertices = buildPlaneGeometry(
+        verticesPerRow,
+        planeGeometry.current.vertices
+      );
     }
   }, []);
 
   function renderPOI() {
-    return pointsOfInterest.map((poi: PointOfInterest, index: number) => (
-      <Dom
-        position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
-        key={`${index}-poi`}
-      >
-        <a className="poi" href={poi.link}>
-          {poi.name}
-        </a>
-      </Dom>
-    ));
+    return (
+      pointsOfInterest &&
+      pointsOfInterest.map((poi: PointOfInterest, index: number) => (
+        <Dom
+          position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
+          key={`${index}-poi`}
+        >
+          <a href={poi.link} className="button">
+            {poi.name}
+          </a>
+        </Dom>
+      ))
+    );
   }
 
   return (
     <>
-      <mesh
-        {...props}
-        ref={mesh}
-        scale={[1, 1, 1]}
-        position={[0, 0, 850]}
-      >
+      <mesh {...props} ref={mesh} scale={[1, 1, 1]} position={[0, 0, 850]}>
         <planeGeometry
           ref={planeGeometry}
           attach="geometry"

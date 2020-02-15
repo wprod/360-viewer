@@ -4,6 +4,7 @@
 
 html,
 body {
+  color: #181a1c;
   padding: 0;
   margin: 0;
   background: lightgrey;
@@ -17,11 +18,37 @@ canvas {
   background: #E2E2E2;
 }
 
-.poi {
-  border: .0625rem solid dodgerblue;
-  padding: .3rem;
-  border-radius: .3rem;
-  font-family: sans-serif;
-  color: dodgerblue;
+.button {
   text-decoration: none;
+  color: #181a1c;
+  font-family: sans-serif;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
+
+.button:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #181a1c;
+  border-radius: .1rem;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: -2px;
+  left: -30%;
+  transform: rotateZ(-45deg);
+  transform-origin: 100% calc(100% - 1px);
+  background: #181a1c;
+  border-radius: .1rem;
+}
+

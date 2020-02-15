@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="New way to build the scene geometry">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/useResize.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/video/controls.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/video/tests/app.test.tsx" afterDir="false" />
+    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/video.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/viewer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,16 +47,16 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/video" />
       <recent name="$PROJECT_DIR$/public/assets" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="RunManager" selected="Jest.renders without crashing (1)">
+  <component name="RunManager" selected="npm.test">
     <configuration name="renders without crashing (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -92,8 +83,33 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="should build a curved plane geometry" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/video/tests/app.test.tsx" />
+      <test-names>
+        <test-name value="should build a curved plane geometry" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.should build a curved plane geometry" />
         <item itemvalue="Jest.renders without crashing (1)" />
         <item itemvalue="Jest.renders without crashing" />
       </list>
@@ -112,7 +128,8 @@
       <workItem from="1581320265586" duration="12361000" />
       <workItem from="1581345641855" duration="4021000" />
       <workItem from="1581405148927" duration="4988000" />
-      <workItem from="1581664315594" duration="15165000" />
+      <workItem from="1581664315594" duration="17090000" />
+      <workItem from="1581689347364" duration="24027000" />
     </task>
     <task id="LOCAL-00001" summary="New way to build the scene geometry">
       <created>1581524304142</created>
@@ -121,7 +138,70 @@
       <option name="project" value="LOCAL" />
       <updated>1581524304142</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add OrbitControls">
+      <created>1581682960440</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581682960440</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add OrbitControls">
+      <created>1581684329921</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581684329921</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Small style adjustments">
+      <created>1581696249191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581696249191</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add more test videos">
+      <created>1581772423170</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772423170</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Test buildPlaneGeometry">
+      <created>1581772464507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772464507</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Invert pan direction">
+      <created>1581772490730</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772490730</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add dynamic models">
+      <created>1581772535291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772535291</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Performances with useMemo">
+      <created>1581772588695</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772588695</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix approximative overflow">
+      <created>1581772625588</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772625588</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +209,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New way to build the scene geometry" />
-    <option name="LAST_COMMIT_MESSAGE" value="New way to build the scene geometry" />
+    <MESSAGE value="Add OrbitControls" />
+    <MESSAGE value="Small style adjustments" />
+    <MESSAGE value="Add more test videos" />
+    <MESSAGE value="Test buildPlaneGeometry" />
+    <MESSAGE value="Invert pan direction" />
+    <MESSAGE value="Add dynamic models" />
+    <MESSAGE value="Performances with useMemo" />
+    <MESSAGE value="Fix approximative overflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix approximative overflow" />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581664964582">
@@ -140,30 +228,35 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="660" y="251" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581345484153" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581681784478">
+    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581772625248">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581681784478" />
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581684329313" />
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581772625248" />
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1581610225368">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610225368" />
-    <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1581610271338">
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1581772392696">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.bottom/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271338" />
-    <state width="1638" height="261" key="GridCell.Tab.0.center" timestamp="1581610271337">
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1581772392696" />
+    <state width="1638" height="261" key="GridCell.Tab.0.center" timestamp="1581772392695">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.center/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271337" />
-    <state width="1638" height="261" key="GridCell.Tab.0.left" timestamp="1581610271336">
+    <state width="1638" height="261" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1581772392695" />
+    <state width="1638" height="261" key="GridCell.Tab.0.left" timestamp="1581772392695">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.left/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271336" />
-    <state width="1638" height="261" key="GridCell.Tab.0.right" timestamp="1581610271338">
+    <state width="1638" height="261" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1581772392695" />
+    <state width="1638" height="261" key="GridCell.Tab.0.right" timestamp="1581772392696">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271338" />
+    <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1581772392696" />
     <state x="468" y="108" key="SettingsEditor" timestamp="1581674285040">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -172,18 +265,20 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="166" key="VCS.ChangeListViewerDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610198557" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1581524307340">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1581696251881">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581524307340" />
-    <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1581405149596">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581684332733" />
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581696251880" />
+    <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1581689479104">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="500" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581405149596" />
-    <state x="620" y="128" width="703" height="777" key="find.popup" timestamp="1581581487322">
+    <state x="500" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581689479104" />
+    <state x="620" y="128" width="706" height="777" key="find.popup" timestamp="1581756084699">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="620" y="128" width="703" height="777" key="find.popup/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581581487322" />
+    <state x="620" y="128" width="706" height="777" key="find.popup/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581691378438" />
+    <state x="620" y="128" width="706" height="777" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581756084699" />
     <state x="601" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1581600632104">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
