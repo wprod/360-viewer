@@ -18,16 +18,6 @@ export function Viewer(props: ViewerProps): JSX.Element {
   // Get video as an html element & create texture
   const video = document.getElementById("viewer-video") as HTMLVideoElement;
 
-  const texture = useMemo(() => {
-    switch (views[currentViewIndex].content.type) {
-      case ViewContentTypeEnum.Video: {
-        return new VideoTexture(video);
-      }
-      default:
-        return new TextureLoader().load(views[currentViewIndex].content.src);
-    }
-  }, [video, currentViewIndex, views]);
-
   function handleVideoStatus(): void {
     setPlay(!play);
     play ? video.pause() : video.play();
@@ -53,8 +43,22 @@ export function Viewer(props: ViewerProps): JSX.Element {
   }
 
   useEffect(() => {
-    video && video.play();
-  }, [video]);
+    if (views[currentViewIndex].content.type === ViewContentTypeEnum.Video) {
+      video.src = views[currentViewIndex].content.src;
+      video.load();
+      video.play();
+    }
+  }, [video, views, currentViewIndex]);
+
+  const texture = useMemo(() => {
+    switch (views[currentViewIndex].content.type) {
+      case ViewContentTypeEnum.Video: {
+        return new VideoTexture(video);
+      }
+      default:
+        return new TextureLoader().load(views[currentViewIndex].content.src);
+    }
+  }, [video, currentViewIndex, views]);
 
   return (
     <div ref={canvasRef}>
