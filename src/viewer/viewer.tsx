@@ -134,7 +134,7 @@ export function Viewer(props: ViewerProps): JSX.Element {
             pointsOfInterest={views[currentViewIndex].pointOfInterest}
             texture={texture}
           />
-          <axesHelper></axesHelper>
+          {/*<axesHelper></axesHelper>*/}
         </Canvas>
       </div>
     </>

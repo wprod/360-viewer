@@ -26,7 +26,6 @@ This project is deployed via Netlify [here](https://compassionate-ramanujan-4c4a
 Additional commands for fixing and debugging:
 
 - `yarn lint` - run all the commands above in parallel.
-- `yarn lint --continue-on-error` - run all the commands above in parallel but do not stop if
 - `yarn lint:pretty --write` - format all files with Prettier.
 
 Your code editor should be configured to fix ESLint and stylelint errors and format files with Prettier on save. Make
