@@ -1,0 +1,15 @@
+:root {
+  /* colors */
+  --primary: #2372fb;
+  --primary-08: transparentize(#2372fb, 0.08);
+  --primary-10: transparentize(#2372fb, 0.1);
+  --primary-25: transparentize(#2372fb, 0.25);;
+  --secondary: #3df9c6;
+  --transparent-white: rgba(255, 255, 255, 0);
+  --gray: #d1e1f5;
+  --light-gray: #f9fbfe;
+
+  /* sizes */
+  --layout-max-width: 77.5rem;
+  --layout-max-width-xl: 90rem;
+}

@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  line-height: 1.625;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: visible scroll;
+  color: var(--wizbii-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+ol,
+ul,
+dl,
+blockquote,
+figure,
+pre,
+address {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dd,
+legend,
+label {
+  margin-bottom: 0.5rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dd,
+blockquote,
+figure {
+  margin-left: 0;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  font-family: inherit;
+  resize: vertical;
+}
+
+pre {
+  overflow: auto;
+}
+
+address {
+  font-style: normal;
+  line-height: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+label,
+output {
+  display: inline-block;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+svg {
+  display: block;
+  border: 0;
+  fill: currentColor;
+
+  &:not(:root) {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration-skip-ink: auto;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:not([href]) {
+    text-decoration: none !important;
+  }
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration-skip-ink: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button,
+summary {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 600;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[tabindex='-1']:focus {
+  outline: 0 !important;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

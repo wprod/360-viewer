@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import './styles.css';
-import { Viewer } from './video/viewer';
-import { View, ViewContentTypeEnum } from './video/models';
+import { Viewer } from './viewer/viewer';
+import { View, ViewContentTypeEnum } from './viewer/models/models';
+import Helmet from 'react-helmet';
+import './styles/global.scss';
 
 const views: View<ViewContentTypeEnum>[] = [
   {
@@ -85,9 +86,14 @@ const views: View<ViewContentTypeEnum>[] = [
 // Arbitrary create a list of "poi"
 
 ReactDOM.render(
-  <div>
-    <h1>Enlaps 220° viewer</h1>
+  <>
+    <Helmet>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      />
+    </Helmet>
     <Viewer views={views} />
-  </div>,
+  </>,
   document.getElementById('root')
 );

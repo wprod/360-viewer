@@ -1,7 +1,5 @@
-import { render } from '@testing-library/react';
 import React from 'react';
-import { Viewer } from '../viewer';
-import { buildPlaneGeometry } from '../utils';
+import { buildPlaneGeometry } from '../utils/utils';
 import { Vector3 } from 'three';
 
 it('should build a curved plane geometry', (): void => {

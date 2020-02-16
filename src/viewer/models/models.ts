@@ -33,3 +33,16 @@ export interface PointOfInterest {
   name: string;
   link: string;
 }
+
+export interface HTMLMediaState {
+  buffered: any[];
+  duration: number;
+  paused: boolean;
+  time: number;
+}
+
+export interface HTMLMediaControls {
+  play: () => Promise<void> | void;
+  pause: () => void;
+  seek: (time: number) => void;
+}

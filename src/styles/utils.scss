@@ -1,0 +1,86 @@
+.async-hide {
+  opacity: 0 !important;
+}
+
+.wrapper {
+  padding-right: 0.875rem;
+  padding-left: 0.875rem;
+
+  @media (min-width: 60em) {
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.btn-clean {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  color: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.btn {
+  composes: btn-clean from global;
+  min-width: 9.25rem;
+  padding: 0.9375rem 1.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  background-color: var(--primary);
+  border-radius: 0.625rem;
+  outline-color: var(--primary);
+  outline-offset: 1px;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.05s ease-out;
+
+  &:not([tabindex='-1']):hover {
+    transform: scale(1.05);
+    transition-duration: 0.1s;
+  }
+
+  &:not([tabindex='-1']):active {
+    transform: scale(1.025);
+  }
+
+  &[data-secondary] {
+    color: var(--primary);
+    background-color: white;
+    outline-color: white;
+  }
+}
+
+.focus-off * {
+  &:focus {
+    outline: none;
+  }
+}
+
+.link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

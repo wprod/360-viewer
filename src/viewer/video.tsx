@@ -8,10 +8,11 @@ import {
   Texture,
 } from 'three';
 import { Dom, extend, ReactThreeFiber } from 'react-three-fiber';
-import { PointOfInterest } from './models';
+import { PointOfInterest } from './models/models';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { Controls } from './controls';
-import { buildPlaneGeometry } from './utils';
+import { buildPlaneGeometry } from './utils/utils';
+import './styles/video.scss';
 extend({ OrbitControls });
 
 declare global {
@@ -50,20 +51,19 @@ export function Video(props: ViewerProps): JSX.Element {
     }
   }, []);
 
-  function renderPOI(): JSX.Element[] | undefined {
-    return (
-      pointsOfInterest &&
-      pointsOfInterest.map((poi: PointOfInterest, index: number) => (
-        <Dom
-          position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
-          key={`${index}-poi`}
-        >
-          <a href={poi.link} className="button">
-            {poi.name}
-          </a>
-        </Dom>
-      ))
-    );
+  function renderPOI(
+    pointsOfInterest: PointOfInterest[]
+  ): JSX.Element[] | undefined {
+    return pointsOfInterest.map((poi: PointOfInterest, index: number) => (
+      <Dom
+        position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
+        key={`${index}-poi`}
+      >
+        <a href={poi.link} className="poi">
+          {poi.name}
+        </a>
+      </Dom>
+    ));
   }
 
   return (
@@ -77,7 +77,7 @@ export function Video(props: ViewerProps): JSX.Element {
         <meshBasicMaterial attach="material" side={DoubleSide} map={texture} />
       </mesh>
       <Controls />
-      {renderPOI()}
+      {pointsOfInterest && renderPOI(pointsOfInterest)}
     </>
   );
 }
