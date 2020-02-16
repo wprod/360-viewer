@@ -1,20 +1,22 @@
-import React, { useEffect, useRef } from "react";
-import { ReactThreeFiber, useFrame, useThree } from "react-three-fiber";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import React, { useEffect, useRef } from 'react';
+import { ReactThreeFiber, useFrame, useThree } from 'react-three-fiber';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-export function Controls() {
+export function Controls(): JSX.Element {
   const controls = useRef<
     ReactThreeFiber.Object3DNode<OrbitControls, typeof OrbitControls>
   >();
   const {
     camera,
-    gl: { domElement }
+    gl: { domElement },
   } = useThree();
 
   useFrame(() => {
     if (!controls.current) {
       return;
     }
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     controls.current.update && controls.current.update();
   });
 

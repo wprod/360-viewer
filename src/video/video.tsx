@@ -1,20 +1,21 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 import {
   DoubleSide,
   VideoTexture,
   Mesh,
   Vector3,
   PlaneGeometry,
-  Texture
-} from "three";
-import { Dom, extend, ReactThreeFiber } from "react-three-fiber";
-import { PointOfInterest } from "./models";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { Controls } from "./controls";
-import { buildPlaneGeometry } from "./utils";
+  Texture,
+} from 'three';
+import { Dom, extend, ReactThreeFiber } from 'react-three-fiber';
+import { PointOfInterest } from './models';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { Controls } from './controls';
+import { buildPlaneGeometry } from './utils';
 extend({ OrbitControls });
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
     interface IntrinsicElements {
       orbitControls: ReactThreeFiber.Object3DNode<
@@ -30,7 +31,7 @@ interface ViewerProps {
   pointsOfInterest?: PointOfInterest[];
 }
 
-export function Video(props: ViewerProps) {
+export function Video(props: ViewerProps): JSX.Element {
   const { texture, pointsOfInterest } = props;
   const verticesPerRow = 51;
 
@@ -49,7 +50,7 @@ export function Video(props: ViewerProps) {
     }
   }, []);
 
-  function renderPOI() {
+  function renderPOI(): JSX.Element[] | undefined {
     return (
       pointsOfInterest &&
       pointsOfInterest.map((poi: PointOfInterest, index: number) => (

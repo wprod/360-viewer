@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/video/controls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/controls.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/video/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/models.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/video/tests/app.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/tests/app.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/video/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/video/video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/video.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/video/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/video/viewer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +61,13 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/video" />
       <recent name="$PROJECT_DIR$/public/assets" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="npm.test">
@@ -220,14 +234,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fix approximative overflow" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581664964582">
+    <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581845811352">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581664964582" />
+    <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1581845811352" />
     <state x="660" y="251" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581345484153">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="660" y="251" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581345484153" />
+    <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581846698720">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581846698720" />
     <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581772625248">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -257,6 +276,10 @@
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271338" />
     <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1581772392696" />
+    <state x="654" y="169" key="RollbackChangesDialog" timestamp="1581845283561">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="654" y="169" key="RollbackChangesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581845283561" />
     <state x="468" y="108" key="SettingsEditor" timestamp="1581674285040">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -274,11 +297,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581689479104" />
-    <state x="620" y="128" width="706" height="777" key="find.popup" timestamp="1581756084699">
+    <state x="620" y="128" width="706" height="777" key="find.popup" timestamp="1581846893595">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="620" y="128" width="706" height="777" key="find.popup/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581691378438" />
-    <state x="620" y="128" width="706" height="777" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581756084699" />
+    <state x="620" y="128" width="706" height="777" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581846893595" />
     <state x="601" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1581600632104">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

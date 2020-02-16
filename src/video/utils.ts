@@ -1,29 +1,34 @@
-import { useEffect, useState } from "react";
-import { Vector3 } from "three";
+import { useEffect, useState } from 'react';
+import { Vector3 } from 'three';
 
-export function useResize() {
-  const isClient = typeof window === "object";
+interface Size {
+  width: number | undefined;
+  height: number | undefined;
+}
 
-  function getSize() {
+export function useResize(): Size {
+  const isClient = typeof window === 'object';
+
+  function getSize(): Size {
     return {
       width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined
+      height: isClient ? window.innerHeight : undefined,
     };
   }
 
   const [windowSize, setWindowSize] = useState(getSize);
 
   useEffect(() => {
-    function handleResize() {
+    function handleResize(): void {
       setWindowSize(getSize());
     }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
+    return (): void => {
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [getSize]);
 
   return windowSize;
 }
@@ -31,7 +36,7 @@ export function useResize() {
 export function buildPlaneGeometry(
   verticesPerRow: number,
   vertices: Vector3[]
-) {
+): Vector3[] {
   // Loop over rows of vertices
   for (let row = 0; row < verticesPerRow; row++) {
     // Loop over row's vertices

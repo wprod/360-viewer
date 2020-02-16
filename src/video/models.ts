@@ -6,8 +6,8 @@ export interface View<T extends ViewContentTypeEnum> {
 }
 
 export enum ViewContentTypeEnum {
-  Image = "Image",
-  Video = "Video"
+  Image = 'Image',
+  Video = 'Video',
 }
 
 export interface ViewContentByType {
@@ -17,6 +17,7 @@ export interface ViewContentByType {
 
 export interface ImageType {
   src: string;
+  pollingInterval: number;
 }
 
 export interface VideoType {

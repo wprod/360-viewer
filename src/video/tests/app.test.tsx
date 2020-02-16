@@ -1,10 +1,10 @@
-import { render } from "@testing-library/react";
-import React from "react";
-import { Viewer } from "../viewer";
-import { buildPlaneGeometry } from "../utils";
-import { Vector3 } from "three";
+import { render } from '@testing-library/react';
+import React from 'react';
+import { Viewer } from '../viewer';
+import { buildPlaneGeometry } from '../utils';
+import { Vector3 } from 'three';
 
-it("should build a curved plane geometry", (): void => {
+it('should build a curved plane geometry', (): void => {
   const testPlane = buildPlaneGeometry(4, [
     new Vector3(0, 0, 0),
     new Vector3(1, 0, 0),
@@ -21,7 +21,7 @@ it("should build a curved plane geometry", (): void => {
     new Vector3(0, 3, 0),
     new Vector3(1, 3, 0),
     new Vector3(2, 3, 0),
-    new Vector3(3, 3, 0)
+    new Vector3(3, 3, 0),
   ]);
 
   // Horizontal deformation :
