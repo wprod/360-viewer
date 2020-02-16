@@ -26,17 +26,16 @@ export function Viewer(props: ViewerProps): JSX.Element {
   // Some browsers return `Promise` on `.play()` and may throw errors
   // if one tries to execute another `.play()` or `.pause()` while that
   // promise is resolving. This lock prevent that :
-  let lockPlay = false;
-
+  const [lockPlay, setLockPlay] = useState<boolean>(false);
   function play(): Promise<void> | undefined {
     if (!lockPlay) {
       const promise = videoRef.play();
       const isPromise = typeof promise === 'object';
 
       if (isPromise) {
-        lockPlay = true;
+        setLockPlay(true);
         const resetLock = (): void => {
-          lockPlay = false;
+          setLockPlay(false);
         };
         promise.then(resetLock, resetLock);
       }

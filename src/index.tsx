@@ -83,8 +83,6 @@ const views: View<ViewContentTypeEnum>[] = [
   },
 ];
 
-// Arbitrary create a list of "poi"
-
 ReactDOM.render(
   <>
     <Helmet>

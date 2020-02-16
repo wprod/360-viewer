@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/utils.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/vars.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viewer/styles/video.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img-1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/controls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/controls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/models/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/tests/app.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/tests/app.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/utils/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/video.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/video/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/viewer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewer/tests/app.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/tests/app.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewer/video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/video.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewer/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/viewer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +68,7 @@
       <recent name="$PROJECT_DIR$/src/video" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Jest.should render without crashing">
     <configuration name="renders without crashing (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -87,19 +77,6 @@
       <envs />
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/video/tests/app.test.tsx" />
-      <test-names>
-        <test-name value="renders without crashing" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/tests/app.test.tsx" />
       <test-names>
         <test-name value="renders without crashing" />
       </test-names>
@@ -115,6 +92,19 @@
       <test-file value="$PROJECT_DIR$/src/video/tests/app.test.tsx" />
       <test-names>
         <test-name value="should build a curved plane geometry" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="should render without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/viewer/tests/app.test.tsx" />
+      <test-names>
+        <test-name value="should render without crashing" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -140,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.should render without crashing" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.should build a curved plane geometry" />
         <item itemvalue="Jest.renders without crashing (1)" />
-        <item itemvalue="Jest.renders without crashing" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +153,7 @@
       <workItem from="1581405148927" duration="4988000" />
       <workItem from="1581664315594" duration="17090000" />
       <workItem from="1581689347364" duration="24027000" />
-      <workItem from="1581850611536" duration="10390000" />
+      <workItem from="1581850611536" duration="14367000" />
     </task>
     <task id="LOCAL-00001" summary="New way to build the scene geometry">
       <created>1581524304142</created>
@@ -242,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581846995456</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Better video controls">
+      <created>1581861673214</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1581861673214</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +255,8 @@
     <MESSAGE value="Add dynamic models" />
     <MESSAGE value="Performances with useMemo" />
     <MESSAGE value="Fix approximative overflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix approximative overflow" />
+    <MESSAGE value="Better video controls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better video controls" />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581845811352">
@@ -274,35 +272,36 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581856481969" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581846985118">
+    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581888315722">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581684329313" />
-    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581846985118" />
-    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1581610225368">
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581888315722" />
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1581888309255">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610225368" />
-    <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1581852493644">
+    <state x="100" y="123" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581888309255" />
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1581876678592">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.bottom/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271338" />
-    <state width="1638" height="261" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1581852493644" />
-    <state width="1638" height="261" key="GridCell.Tab.0.center" timestamp="1581852493642">
+    <state width="1638" height="261" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1581876678592" />
+    <state width="1638" height="261" key="GridCell.Tab.0.center" timestamp="1581876678590">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.center/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271337" />
-    <state width="1638" height="261" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1581852493642" />
-    <state width="1638" height="261" key="GridCell.Tab.0.left" timestamp="1581852493642">
+    <state width="1638" height="261" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1581876678590" />
+    <state width="1638" height="261" key="GridCell.Tab.0.left" timestamp="1581876678589">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.left/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271336" />
-    <state width="1638" height="261" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1581852493642" />
-    <state width="1638" height="261" key="GridCell.Tab.0.right" timestamp="1581852493643">
+    <state width="1638" height="261" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1581876678589" />
+    <state width="1638" height="261" key="GridCell.Tab.0.right" timestamp="1581876678591">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610271338" />
-    <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1581852493643" />
+    <state width="1638" height="261" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1581876678591" />
     <state x="654" y="169" key="RollbackChangesDialog" timestamp="1581845283561">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -316,20 +315,20 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="166" key="VCS.ChangeListViewerDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610198557" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1581847043934">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1581861681122">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581684332733" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581847043934" />
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581861681122" />
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1581689479104">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581689479104" />
-    <state x="620" y="128" width="858" height="777" key="find.popup" timestamp="1581860223200">
+    <state x="620" y="128" width="858" height="777" key="find.popup" timestamp="1581875727257">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="620" y="128" width="706" height="777" key="find.popup/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581691378438" />
-    <state x="620" y="128" width="858" height="777" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581860223200" />
+    <state x="620" y="128" width="858" height="777" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581875727257" />
     <state x="601" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1581854991095">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

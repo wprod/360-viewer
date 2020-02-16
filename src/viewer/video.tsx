@@ -36,7 +36,6 @@ export function Video(props: ViewerProps): JSX.Element {
   const { texture, pointsOfInterest } = props;
   const verticesPerRow = 51;
 
-  // Refs
   const mesh = useRef<ReactThreeFiber.Object3DNode<Mesh, typeof Mesh>>();
   const planeGeometry = useRef<
     ReactThreeFiber.Object3DNode<PlaneGeometry, typeof PlaneGeometry>
@@ -68,7 +67,7 @@ export function Video(props: ViewerProps): JSX.Element {
 
   return (
     <>
-      <mesh {...props} ref={mesh} scale={[1, 1, 1]} position={[0, 0, 850]}>
+      <mesh {...props} ref={mesh} position={[0, 0, 850]}>
         <planeGeometry
           ref={planeGeometry}
           attach="geometry"
