@@ -32,7 +32,7 @@ interface ViewerProps {
   pointsOfInterest?: PointOfInterest[];
 }
 
-export function Video(props: ViewerProps): JSX.Element {
+export function Scene(props: ViewerProps): JSX.Element {
   const { texture, pointsOfInterest } = props;
   const verticesPerRow = 51;
 

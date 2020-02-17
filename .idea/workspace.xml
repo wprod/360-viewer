@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
+    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="Update readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewer/utils/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/utils/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewer/video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/scene.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/viewer/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewer/viewer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -289,10 +292,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581888742587" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581890276395">
+    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1581954802981">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581684329313" />
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581954802981" />
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581890276395" />
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1581888309255">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -332,10 +335,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="166" key="VCS.ChangeListViewerDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610198557" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1581890280736">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1581954775876">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581684332733" />
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581954775876" />
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581890280736" />
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1581689479104">
       <screen x="0" y="23" width="1680" height="1027" />

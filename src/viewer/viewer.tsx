@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { TextureLoader, VideoTexture } from 'three';
-import { Video } from './video';
+import { Scene } from './scene';
 import { Canvas } from 'react-three-fiber';
 import { HTMLMediaState, View, ViewContentTypeEnum } from './models/models';
 
@@ -130,11 +130,10 @@ export function Viewer(props: ViewerProps): JSX.Element {
         >
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <Video
+          <Scene
             pointsOfInterest={views[currentViewIndex].pointOfInterest}
             texture={texture}
           />
-          {/*<axesHelper></axesHelper>*/}
         </Canvas>
       </div>
     </>
