@@ -109,16 +109,23 @@ export function Viewer(props: ViewerProps): JSX.Element {
 
   return (
     <>
-      <div className="controls-wrapper">
-        <button className="btn" onClick={(): void => handleVideoStatus()}>
+      <div className="wrapper controls-wrapper">
+        <button
+          className="btn"
+          disabled={
+            views[currentViewIndex].content.type === ViewContentTypeEnum.Image
+          }
+          onClick={(): void => handleVideoStatus()}
+        >
           {state.paused ? 'Pause' : 'Play'}
         </button>
 
         <button
           className="btn"
           onClick={async (): Promise<void> => await handleNextView()}
+          disabled={views.length === currentViewIndex + 1}
         >
-          Next video/image
+          Next
         </button>
       </div>
 

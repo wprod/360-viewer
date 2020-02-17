@@ -28,7 +28,6 @@
     "@typescript-eslint/no-unnecessary-qualifier": "error",
     "@typescript-eslint/no-unnecessary-type-arguments": "error",
     "@typescript-eslint/no-untyped-public-signature": "error",
-    "@typescript-eslint/no-unused-expressions": "error",
     "@typescript-eslint/no-useless-constructor": "error",
     "@typescript-eslint/prefer-function-type": "error",
     "@typescript-eslint/prefer-readonly": "error",

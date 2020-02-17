@@ -1,8 +1,6 @@
 import React from 'react';
 import { buildPlaneGeometry } from '../utils/utils';
 import { Vector3 } from 'three';
-import { render } from '@testing-library/react';
-import { Viewer } from '../viewer';
 
 it('should build a curved plane geometry', (): void => {
   const testPlane = buildPlaneGeometry(4, [

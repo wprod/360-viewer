@@ -159,3 +159,12 @@ strong {
     animation: none !important;
   }
 }
+
+header, footer {
+  margin: 3rem auto 0;
+  max-width: var(--layout-max-width);
+}
+
+ul {
+  padding: 0  0 0 1.25rem;
+}

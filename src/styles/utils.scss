@@ -55,13 +55,18 @@
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
   transition: transform 0.05s ease-out;
 
-  &:not([tabindex='-1']):hover {
+  &:not(:disabled):hover {
     transform: scale(1.05);
     transition-duration: 0.1s;
   }
 
-  &:not([tabindex='-1']):active {
+  &:not(:disabled):active {
     transform: scale(1.025);
+  }
+
+  &:disabled {
+    opacity: .8;
+    cursor: not-allowed;
   }
 
   &[data-secondary] {

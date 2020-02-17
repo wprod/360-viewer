@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import { Viewer } from './viewer/viewer';
-import { View, ViewContentTypeEnum } from './viewer/models/models';
+import { Viewer } from './components/viewer/viewer';
+import { View, ViewContentTypeEnum } from './components/viewer/models/models';
 import Helmet from 'react-helmet';
 import './styles/global.scss';
 
@@ -32,21 +32,21 @@ const views: View<ViewContentTypeEnum>[] = [
     },
   },
   {
-    name: 'Refuge du soleil',
+    name: 'Dent de Crolles',
     description: 'Levé de soleil',
     pointOfInterest: [
       {
-        position: { x: 0, y: 0, z: 500 },
-        name: 'Refuge du Soleil',
+        position: { x: 250, y: -80, z: 1500 },
+        name: 'Passage du chamois',
         link: 'https://refugedugouter.ffcam.fr/FR_home.html',
       },
       {
-        position: { x: -350, y: -160, z: 500 },
+        position: { x: -1000, y: -80, z: 1500 },
         name: 'Grenoble',
         link: 'https://www.chamonix.com/',
       },
       {
-        position: { x: -180, y: -190, z: 500 },
+        position: { x: -700, y: -670, z: 1500 },
         name: 'Crolles',
         link: 'https://www.chamonix.com/',
       },
@@ -91,7 +91,38 @@ ReactDOM.render(
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
       />
     </Helmet>
+
+    <header className="wrapper">
+      <h1 className="header__title">220° viewer</h1>
+      <p>
+        This project uses{' '}
+        <a href="https://github.com/react-spring/react-three-fiber">
+          React-Fiber
+        </a>
+        , A react renderer for threejs (web and react-native).
+        <br /> Find the source code{' '}
+        <a href="https://github.com/wprod/360-viewer">here</a>.
+      </p>
+    </header>
     <Viewer views={views} />
+    <footer className="wrapper">
+      <p>
+        Your code editor should be configured to fix ESLint and stylelint errors
+        and format files with Prettier on save. <br />
+        Make sure to install the recommended extensions in VSCode and the
+        recommended plugins in IntelliJ.
+      </p>
+
+      <b>Cool stuff</b>
+      <ul>
+        <li>
+          <a href="https://codepen.io/wprod">Codepen</a>
+        </li>
+        <li>
+          <a href="https://medium.com/@witters.amand">Medium</a>
+        </li>
+      </ul>
+    </footer>
   </>,
   document.getElementById('root')
 );

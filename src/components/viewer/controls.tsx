@@ -16,7 +16,6 @@ export function Controls(): JSX.Element {
       return;
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     controls.current.update && controls.current.update();
   });
 
