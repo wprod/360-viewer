@@ -10,7 +10,7 @@ export function buildPlaneGeometry(
     for (let vertexIndex = 0; vertexIndex < verticesPerRow; vertexIndex++) {
       // Displace
       vertices[row * verticesPerRow + vertexIndex].z =
-        -Math.cos((row - verticesPerRow / 2) / (verticesPerRow / 2)) * 240 +
+        -Math.cos((row - verticesPerRow / 2) / (verticesPerRow / 2)) * 140 +
         -Math.cos((vertexIndex - verticesPerRow / 2) / (verticesPerRow / 2)) *
           1000;
     }
