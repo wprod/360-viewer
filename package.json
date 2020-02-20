@@ -37,7 +37,7 @@
     "test": "react-scripts test",
     "lint": "run-p lint:*",
     "lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\"",
-    "lint:pretty": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
+    "lint:pretty": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,yml,html}\""
   },
   "husky": {
     "hooks": {

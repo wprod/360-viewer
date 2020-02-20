@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +154,8 @@
       <workItem from="1581964112849" duration="25000" />
       <workItem from="1581964403950" duration="142000" />
       <workItem from="1582009652789" duration="5281000" />
-      <workItem from="1582108730274" duration="1394000" />
+      <workItem from="1582108730274" duration="2534000" />
+      <workItem from="1582212493479" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="New way to build the scene geometry">
       <created>1581524304142</created>
@@ -288,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581963986772</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Test wizbii tracker">
+      <created>1582113198901</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1582113198901</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +320,8 @@
     <MESSAGE value="Small overflow adjustment" />
     <MESSAGE value="Naming" />
     <MESSAGE value="Add a small header/footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a small header/footer" />
+    <MESSAGE value="Test wizbii tracker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test wizbii tracker" />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581845811352">
@@ -327,10 +337,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581888742587" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1582113188845">
+    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1582113197456">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113188845" />
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113197456" />
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581963981790" />
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1581888309255">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -370,10 +380,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="166" key="VCS.ChangeListViewerDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610198557" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1581963995132">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1582113201320">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581954828575" />
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113201320" />
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581963995132" />
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1582009657149">
       <screen x="0" y="23" width="1680" height="1027" />
