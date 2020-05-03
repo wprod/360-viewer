@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { ReactThreeFiber, useFrame, useThree } from 'react-three-fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { PerspectiveCamera } from 'three';
 
 export function Controls(): JSX.Element {
   const controls = useRef<
     ReactThreeFiber.Object3DNode<OrbitControls, typeof OrbitControls>
   >();
+
   const {
     camera,
     gl: { domElement },
@@ -29,8 +31,17 @@ export function Controls(): JSX.Element {
     controls.current.maxPolarAngle = (94 * Math.PI) / 180;
 
     // Horizontal
-    controls.current.minAzimuthAngle = (-20 * Math.PI) / 180;
-    controls.current.maxAzimuthAngle = (20 * Math.PI) / 180;
+    const hFov =
+      2 *
+      Math.atan(
+        Math.tan(((camera as PerspectiveCamera).fov * Math.PI) / 180 / 2) *
+          (camera as PerspectiveCamera).aspect
+      );
+
+    const x = (110 * Math.PI) / 180;
+
+    controls.current.minAzimuthAngle = -x + hFov;
+    controls.current.maxAzimuthAngle = x - hFov;
   }, []);
 
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
-import { buildPlaneGeometry } from '../utils/utils';
+import { transformPlaneGeometry } from '../utils/utils';
 import { Vector3 } from 'three';
 
 it('should build a curved plane geometry', (): void => {
-  const testPlane = buildPlaneGeometry(4, [
+  const testPlane = transformPlaneGeometry(4, [
     new Vector3(0, 0, 0),
     new Vector3(1, 0, 0),
     new Vector3(2, 0, 0),

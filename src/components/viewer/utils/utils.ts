@@ -1,6 +1,6 @@
 import { Vector3 } from 'three';
 
-export function buildPlaneGeometry(
+export function transformPlaneGeometry(
   verticesPerRow: number,
   vertices: Vector3[]
 ): Vector3[] {

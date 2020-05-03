@@ -3,6 +3,7 @@ import { TextureLoader, VideoTexture } from 'three';
 import { Scene } from './scene';
 import { Canvas } from 'react-three-fiber';
 import { HTMLMediaState, View, ViewContentTypeEnum } from './models/models';
+import { useMeasure } from 'react-use';
 
 interface ViewerProps {
   views: View<ViewContentTypeEnum>[];
@@ -10,12 +11,9 @@ interface ViewerProps {
 
 export function Viewer(props: ViewerProps): JSX.Element {
   const { views } = props;
-
-  const canvasRef = useRef<HTMLDivElement>(null);
+  const [canvasRef, { width, height }] = useMeasure();
   const videoRef = document.getElementById('viewer-video') as HTMLVideoElement;
-
   const [currentViewIndex, setCurrentViewIndex] = useState<number>(0);
-
   const [state, setState] = useState<HTMLMediaState>({
     buffered: [],
     time: 0,
@@ -133,13 +131,15 @@ export function Viewer(props: ViewerProps): JSX.Element {
         <Canvas
           shadowMap
           pixelRatio={window.devicePixelRatio}
-          camera={{ far: 1000 }}
+          camera={{ fov: 20, aspect: width / height, far: 9000 }}
+          orthographic={false}
         >
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <Scene
             pointsOfInterest={views[currentViewIndex].pointOfInterest}
             texture={texture}
+            zFar={15}
           />
         </Canvas>
       </div>

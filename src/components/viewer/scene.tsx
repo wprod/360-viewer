@@ -1,17 +1,9 @@
-import React, { useEffect, useRef } from 'react';
-import {
-  DoubleSide,
-  VideoTexture,
-  Mesh,
-  Vector3,
-  PlaneGeometry,
-  Texture,
-} from 'three';
+import React from 'react';
+import { DoubleSide, VideoTexture, Vector3, Texture } from 'three';
 import { Dom, extend, ReactThreeFiber } from 'react-three-fiber';
 import { PointOfInterest } from './models/models';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { Controls } from './controls';
-import { buildPlaneGeometry } from './utils/utils';
 import './styles/video.scss';
 extend({ OrbitControls });
 
@@ -30,32 +22,18 @@ declare global {
 interface ViewerProps {
   texture: VideoTexture | Texture;
   pointsOfInterest?: PointOfInterest[];
+  zFar: number;
 }
 
 export function Scene(props: ViewerProps): JSX.Element {
-  const { texture, pointsOfInterest } = props;
-  const verticesPerRow = 51;
-
-  const mesh = useRef<ReactThreeFiber.Object3DNode<Mesh, typeof Mesh>>();
-  const planeGeometry = useRef<
-    ReactThreeFiber.Object3DNode<PlaneGeometry, typeof PlaneGeometry>
-  >();
-
-  useEffect(() => {
-    if (planeGeometry.current && planeGeometry.current.vertices) {
-      planeGeometry.current.vertices = buildPlaneGeometry(
-        verticesPerRow,
-        planeGeometry.current.vertices
-      );
-    }
-  }, []);
+  const { texture, pointsOfInterest, zFar } = props;
 
   function renderPOI(
     pointsOfInterest: PointOfInterest[]
   ): JSX.Element[] | undefined {
     return pointsOfInterest.map((poi: PointOfInterest, index: number) => (
       <Dom
-        position={new Vector3(poi.position.x, poi.position.y, poi.position.z)}
+        position={new Vector3(poi.position.x, poi.position.y, -100)}
         key={`${index}-poi`}
       >
         <a href={poi.link} className="poi">
@@ -67,11 +45,18 @@ export function Scene(props: ViewerProps): JSX.Element {
 
   return (
     <>
-      <mesh {...props} ref={mesh} position={[0, 0, 850]}>
-        <planeGeometry
-          ref={planeGeometry}
+      <mesh {...props} name={'screen'} position={[0, 0, 0]} scale={[-1, 1, 1]}>
+        <sphereGeometry
           attach="geometry"
-          args={[1920, 1080, verticesPerRow - 1, verticesPerRow - 1]}
+          args={[
+            10,
+            15,
+            15,
+            (160 * Math.PI) / 180,
+            (220 * Math.PI) / 180,
+            Math.PI / 3,
+            Math.PI / 3,
+          ]}
         />
         <meshBasicMaterial attach="material" side={DoubleSide} map={texture} />
       </mesh>
