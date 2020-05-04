@@ -11,19 +11,52 @@ const views: View<ViewContentTypeEnum>[] = [
     description: 'Coucher de soleil',
     pointOfInterest: [
       {
-        position: { x: 1, y: 1 },
+        position: {
+          x: -5.40924871190546,
+          y: -0.7067147818302303,
+          z: -8.301842331759326,
+        },
         name: 'Refuge du gouter',
         link: 'https://refugedugouter.ffcam.fr/FR_home.html',
       },
       {
-        position: { x: -3, y: 5 },
-        name: 'Chamonix',
-        link: 'https://www.chamonix.com/',
+        position: {
+          x: -1.290799454352555,
+          y: -1.2671824835167418,
+          z: -9.826303753401723,
+        },
+        name: 'Un cailloux',
+        link: 'https://refugedugouter.ffcam.fr/FR_home.html',
       },
+
       {
-        position: { x: -1, y: -2 },
-        name: 'Passy',
-        link: 'https://www.chamonix.com/',
+        position: {
+          x: 8.499956913340242,
+          y: -1.309946114376514,
+          z: -4.655366804991561,
+        },
+        name: 'Super pancarte',
+        link: 'https://refugedugouter.ffcam.fr/FR_home.html',
+      },
+
+      {
+        position: {
+          x: 9.85058092526743,
+          y: -1.0060418144916221,
+          z: -0.5909866771013714,
+        },
+        name: 'Petite cabane',
+        link: 'https://refugedugouter.ffcam.fr/FR_home.html',
+      },
+
+      {
+        position: {
+          x: 4.828179954442493,
+          y: -0.39890573736965435,
+          z: -8.652855411969764,
+        },
+        name: 'En bas',
+        link: 'https://refugedugouter.ffcam.fr/FR_home.html',
       },
     ],
     content: {
@@ -34,23 +67,7 @@ const views: View<ViewContentTypeEnum>[] = [
   {
     name: 'Dent de Crolles',
     description: 'Levé de soleil',
-    pointOfInterest: [
-      {
-        position: { x: 2.5, y: -0.8 },
-        name: 'Passage du chamois',
-        link: 'https://refugedugouter.ffcam.fr/FR_home.html',
-      },
-      {
-        position: { x: -10, y: -8 },
-        name: 'Grenoble',
-        link: 'https://www.chamonix.com/',
-      },
-      {
-        position: { x: -7, y: -6.7 },
-        name: 'Crolles',
-        link: 'https://www.chamonix.com/',
-      },
-    ],
+    pointOfInterest: [],
     content: {
       type: ViewContentTypeEnum.Video,
       src: './assets/video-3.mp4',
@@ -59,23 +76,7 @@ const views: View<ViewContentTypeEnum>[] = [
   {
     name: 'Refuge du soleil',
     description: 'Photo du levé de soleil',
-    pointOfInterest: [
-      {
-        position: { x: 1.1, y: 1 },
-        name: 'Refuge du Soleil',
-        link: 'https://refugedugouter.ffcam.fr/FR_home.html',
-      },
-      {
-        position: { x: -3, y: 5 },
-        name: 'Grenoble',
-        link: 'https://www.chamonix.com/',
-      },
-      {
-        position: { x: -1, y: -20 },
-        name: 'Crolles',
-        link: 'https://www.chamonix.com/',
-      },
-    ],
+    pointOfInterest: [],
     content: {
       type: ViewContentTypeEnum.Image,
       src: './assets/img-1.jpg',
