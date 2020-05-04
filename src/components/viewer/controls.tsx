@@ -31,10 +31,9 @@ export function Controls(): JSX.Element {
       );
 
     const x = ((220 / 2) * Math.PI) / 180;
-
     controls.current.minAzimuthAngle = -x + hFov;
     controls.current.maxAzimuthAngle = x - hFov;
-  }, []);
+  }, [camera]);
 
   return (
     <orbitControls
