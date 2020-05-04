@@ -159,7 +159,7 @@
       <workItem from="1587450420737" duration="2485000" />
       <workItem from="1587623568477" duration="1561000" />
       <workItem from="1587826918691" duration="19422000" />
-      <workItem from="1588432221551" duration="14488000" />
+      <workItem from="1588432221551" duration="14672000" />
     </task>
     <task id="LOCAL-00001" summary="New way to build the scene geometry">
       <created>1581524304142</created>
@@ -308,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588498749409</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat(Scene): responsive viewer">
+      <created>1588572658780</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1588572658780</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,10 +356,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581888742587" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1588498743999">
+    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1588572653150">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113197456" />
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588572653150" />
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1588498743999" />
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1588572318722">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -393,10 +401,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="166" key="VCS.ChangeListViewerDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610198557" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1588498757219">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1588572662662">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113201320" />
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588572662662" />
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1588498757219" />
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1582009657149">
       <screen x="0" y="23" width="1680" height="1027" />

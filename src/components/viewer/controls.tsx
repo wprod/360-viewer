@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ReactThreeFiber, useFrame, useThree } from 'react-three-fiber';
+import { ReactThreeFiber, useThree } from 'react-three-fiber';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { PerspectiveCamera } from 'three';
 
@@ -12,16 +12,6 @@ export function Controls(): JSX.Element {
     camera,
     gl: { domElement },
   } = useThree();
-
-  useFrame(() => {
-    if (!controls.current) {
-      return;
-    }
-
-    console.log((camera as PerspectiveCamera).rotation.x);
-
-    controls.current.update && controls.current.update();
-  });
 
   useEffect(() => {
     if (!controls.current) {
@@ -49,7 +39,7 @@ export function Controls(): JSX.Element {
   return (
     <orbitControls
       ref={controls}
-      enableDamping={true}
+      enableDamping={false}
       enableKeys={false}
       enableZoom={true}
       rotateSpeed={-0.1}
