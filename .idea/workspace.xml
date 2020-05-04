@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/viewer/controls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/controls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/models/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/models/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/scene.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/styles/video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/styles/video.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/tests/app.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/tests/app.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/utils/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/utils/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/viewer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +159,7 @@
       <workItem from="1587450420737" duration="2485000" />
       <workItem from="1587623568477" duration="1561000" />
       <workItem from="1587826918691" duration="19422000" />
-      <workItem from="1588432221551" duration="7099000" />
+      <workItem from="1588432221551" duration="14488000" />
     </task>
     <task id="LOCAL-00001" summary="New way to build the scene geometry">
       <created>1581524304142</created>
@@ -311,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582113198901</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat(Scene): responsive viewer">
+      <created>1588498749409</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1588498749409</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +332,8 @@
     <MESSAGE value="Naming" />
     <MESSAGE value="Add a small header/footer" />
     <MESSAGE value="Test wizbii tracker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test wizbii tracker" />
+    <MESSAGE value="feat(Scene): responsive viewer" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(Scene): responsive viewer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581845811352">
@@ -351,15 +349,16 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581888742587" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1582113197456">
+    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1588498743999">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113197456" />
-    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1581963981790" />
-    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1581888309255">
+    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1588498743999" />
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1588572318722">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610225368" />
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588572318722" />
     <state x="100" y="123" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581888309255" />
     <state width="1638" height="261" key="GridCell.Tab.0.bottom" timestamp="1581890253372">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -394,11 +393,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="166" key="VCS.ChangeListViewerDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610198557" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1582113201320">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1588498757219">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113201320" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1581963995132" />
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1588498757219" />
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1582009657149">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
