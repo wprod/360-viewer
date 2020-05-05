@@ -1,4 +1,3 @@
-import React from 'react';
 import { transformPlaneGeometry } from '../utils/utils';
 import { Vector3 } from 'three';
 

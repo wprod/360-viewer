@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { TextureLoader, VideoTexture } from 'three';
 import { Scene } from './scene';
 import { Canvas } from 'react-three-fiber';
@@ -135,7 +135,6 @@ export function Viewer(props: ViewerProps): JSX.Element {
           orthographic={false}
         >
           <ambientLight />
-          <pointLight position={[10, 10, 10]} />
           <Scene
             pointsOfInterest={views[currentViewIndex].pointOfInterest}
             texture={texture}

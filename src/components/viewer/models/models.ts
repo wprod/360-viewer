@@ -1,7 +1,7 @@
 export interface View<T extends ViewContentTypeEnum> {
   name: string;
   description: string;
-  pointOfInterest?: PointOfInterest[];
+  pointOfInterest: PointOfInterest[];
   content: { type: T } & ViewContentByType[T];
 }
 

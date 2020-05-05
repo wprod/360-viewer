@@ -40,7 +40,7 @@ export function Controls(): JSX.Element {
       ref={controls}
       enableDamping={false}
       enableKeys={false}
-      enableZoom={true}
+      enableZoom={false}
       rotateSpeed={-0.1}
       panSpeed={0.5}
       args={[camera, domElement]}
