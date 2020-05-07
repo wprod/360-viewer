@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="">
+    <list default="true" id="1a9a3be4-94f0-45cb-abb4-ce3e95bb75f1" name="Default Changelist" comment="fix(Poi): Place poi relative to canvas, not screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/controls.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/controls.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/models/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/models/models.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/scene.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/scene.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/tests/app.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/tests/app.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/viewer/viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/viewer/viewer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +47,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -165,7 +160,8 @@
       <workItem from="1587623568477" duration="1561000" />
       <workItem from="1587826918691" duration="19422000" />
       <workItem from="1588432221551" duration="17721000" />
-      <workItem from="1588660912058" duration="2033000" />
+      <workItem from="1588660912058" duration="2864000" />
+      <workItem from="1588859048481" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="New way to build the scene geometry">
       <created>1581524304142</created>
@@ -349,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588576065272</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix(Poi): Place poi relative to canvas, not screen">
+      <created>1588663142361</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1588663142361</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +380,8 @@
     <MESSAGE value="feat(Scene): disable damping until refactor" />
     <MESSAGE value="feat(POI): update the way of placing poi's" />
     <MESSAGE value="fix(Scene): deps" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(Scene): deps" />
+    <MESSAGE value="fix(Poi): Place poi relative to canvas, not screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(Poi): Place poi relative to canvas, not screen" />
   </component>
   <component name="WindowStateProjectService">
     <state x="693" y="316" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581845811352">
@@ -393,11 +397,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="577" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1581888742587" />
-    <state x="561" y="41" key="CommitChangelistDialog2" timestamp="1588576060474">
+    <state x="561" y="29" key="CommitChangelistDialog2" timestamp="1588859452502">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113197456" />
-    <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588576060474" />
+    <state x="561" y="29" key="CommitChangelistDialog2/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588859452502" />
     <state x="561" y="41" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1588498743999" />
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1588572318722">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -446,11 +450,11 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="166" key="VCS.ChangeListViewerDialog/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581610198557" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1588576305491">
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2" timestamp="1588663145723">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1582113201320" />
-    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588576305491" />
+    <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588663145723" />
     <state x="580" y="262" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1588498757219" />
     <state x="500" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1582009657149">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -467,11 +471,11 @@
     <state x="620" y="128" width="706" height="777" key="find.popup/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581691378438" />
     <state x="620" y="128" width="858" height="777" key="find.popup/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1587887661862" />
     <state x="620" y="128" width="858" height="777" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581875727257" />
-    <state x="601" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1588663020869">
+    <state x="601" y="240" width="670" height="676" key="search.everywhere.popup" timestamp="1588663069122">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="601" y="240" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027/-268.-1057.1920.1057@0.23.1680.1027" timestamp="1581600632104" />
-    <state x="601" y="240" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588663020869" />
+    <state x="601" y="240" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027/-273.-1057.1920.1057@0.23.1680.1027" timestamp="1588663069122" />
     <state x="601" y="240" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581854991095" />
     <state x="570" y="375" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1587890001239">
       <screen x="0" y="23" width="1680" height="1027" />
